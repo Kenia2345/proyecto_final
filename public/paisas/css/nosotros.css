@@ -1,0 +1,265 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: century gothic;
+	background: url(../nosotros/fondo2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+}
+.wrap{
+	width: 90%;
+	max-width: 1150px;
+	margin: auto;
+}
+
+.main{
+	height: 950px;
+	
+}
+
+header{
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+header .wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0px;
+}
+
+header .btn-menu{
+	font-size: 30px;
+	cursor: pointer;
+	color: white;
+}
+
+.seccion1,
+.seccion1 .wrap{
+	height: 100%;
+}
+
+.seccion1 .wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.caption-main h2{
+	font-size: 95px;
+	font-weight: 800;
+	color: #fff;
+}
+
+.caption-main .btn-view{
+	display: block;
+	margin: 50px auto 0px;
+
+	width: 350px;
+	padding: 20px 0px;
+	border: 2px solid #fff;
+	border-radius: 15px;
+
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.contenedor{
+	width: 80%; /*800px*/
+	max-width: 800px;
+	margin:0 auto;
+}
+
+.videos{
+	width: 100%; /*700px*/
+	background: rgba(0,0,0,0.4);
+	padding: 20px;
+	float: left;
+	box-sizing: border-box;
+	clear: left;
+	margin-top: 10px;
+}
+
+.descripcion {
+  color: #fff;
+  text-align: justify; 
+  margin-top: 200px;
+  margin: 10px;
+  font-size: 85%;
+  transition: margin-top 0.4s;
+}
+
+/* MENU FULL ===================*/
+
+.full-menu{
+	position: fixed;
+	top: 0;
+	left: -100%;
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../images/pattern.png'), url('../images/2.jpg');
+
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.full-menu .wrap{
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.full-menu .wrap .navegacion{
+	flex-basis: 0;
+	flex-grow: 1;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.full-menu .navegacion ul{
+	list-style: none;
+
+}
+
+.menu-principal{
+	padding: 0px;
+    margin: 0 0 -10px 0;
+    position: relative;
+	/*width: 50%;
+	height: 50%;*/
+}
+
+.menu-principal li{
+	font-size: 50px;
+    display: block;
+}
+
+.menu-principal li a{
+	font-family: 'Century Gothic';
+	text-decoration: none;
+	display: block;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px rgba(89,22,20,0.3);
+	color: #581514;
+	padding: 5px 20px;
+	margin: 2px;
+	background: rgba(255,255,255,0.2);
+	letter-spacing: 1px;
+	-webkit-transform: skew(-12deg);
+	-moz-transform: skew(-12deg);
+	-o-transform: skew(-12deg);
+	-ms-transform: skew(-12deg);
+	transform: skew(-12deg);
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.menu-principal:hover li a{
+	color: transparent;
+	text-shadow: 0px 0px 10px #fff;
+	background: rgba(155,12,12,0.2);
+	-webkit-transform: skew(0deg);
+	-moz-transform: skew(0deg);
+	-o-transform: skew(0deg);
+	-ms-transform: skew(0deg);
+	transform: skew(0deg);
+}
+.menu-principal li a:hover{
+	background: transparent;
+	text-shadow: 1px 1px 10px rgba(89,22,20,0.6);
+	color: #581514;
+}
+
+.full-menu .navegacion .social-items a{
+	text-decoration: none;
+	font-size: 40px;
+	color: #6a0807;
+	margin: 50px 20px 0px 0px;
+}
+
+.full-menu .navegacion .social-items a:hover{
+	/*color: #e9821d;*/
+	color: #a32220;
+}
+
+
+/* Resposive */
+
+@media screen and (max-width: 520px){
+	.full-menu .menu-text{
+		display: none;
+	}
+
+	.full-menu .navegacion{
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.main{
+		height: 600px;
+	}
+
+	.caption-main h1{
+		font-size: 50px;
+	}
+
+	.caption-main .-view{
+		width: 180px;
+		padding: 10px 0px;
+		margin: 20px auto;
+
+		font-size: 18px;
+	}
+	.menu-principal li a{
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 340px){
+	.main{
+		height: 550px;
+	}
+
+	.caption-main h1{
+		font-size: 20px;
+	}
+
+	.menu-principal li a{
+		font-size: 20px;
+	}
+
+}
+
+@media screen and (max-width: 50em) {
+	.content {
+		padding: 0 10px;
+		text-align: center;
+	}
+	.grid figure {
+		display: inline-block;
+		float: none;
+		margin: 10px auto;
+		width: 100%;
+	}
+}
+
+
+
